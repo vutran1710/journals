@@ -4,7 +4,10 @@
 #+AUTHOR: Vu Tran
 #+EMAIL: me@vutr.io`
 
-* Content                                                               :TOC:
+#+ATTR_HTML: :style margin-left: auto; margin-right: auto; :width 1000px
+[[../image/event-loop.jpg]]
+
+* Mục lục                                                               :TOC:
 - [[#giới-thiệu][Giới thiệu]]
 - [[#tổng-quát][Tổng quát]]
   - [[#stack-và-queue][Stack và Queue]]
@@ -27,6 +30,7 @@ Bài viết được lưu tại:
 
 * Tổng quát
 Tham khảo: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop][MDN Official: EventLoop]]
+
 Để hiểu về Event-Loop, trước hết ta cần hiểu một số khái niệm cơ bản nhất của máy tính và lập trình, bao gồm Stack,
 Queue, RAM.
 ** Stack và Queue
@@ -36,8 +40,7 @@ Queue, RAM.
 Cơ chế hoạt động của stack được biết đến nhiều nhất với tên gọi First-In-Last-Out (FILO), nghĩa là phần tử đầu tiên được
 thêm vào nhóm sẽ là phần tử cuối cùng được loại ra, và ngược lại (Last-In-First-Out).
 
-Minh họa:
-[[./stack.png]]
+[[../image/stack.png]]
 
 *Queue* cũng là một mô hình dữ liệu dạng nhóm, nhưng có trình tự xử lý phần tử khác với stack. Trong mô hình Queue, trật
 tự phần tử (order) được đảm bảo theo nguyên tắc: phần tử đầu tiên được thêm vào cũng sẽ là phần tử đầu tiên được rút
@@ -45,8 +48,7 @@ ra. Việc xử lý queue cũng gồm 2 thao tác:
 1. *Enqueue*: thêm phần tử mới vào nhóm
 2. *Dequeue*: loại bỏ phần tử cũ nhất ra khỏi nhóm
 
-Minh họa:
-[[./queue.png]]
+[[../image/queue.jpg]]
 
 Queue và Stack có thể có 4 trạng thái: rỗng(empty), không-rỗng(non-empty/underflow), đầy(full) và tràn(overflow), dựa
 trên tương quan giữa kích cỡ nhóm (collection-size) của Queue/Stack và tổng số phần tử thực tế nhận vào. Về
