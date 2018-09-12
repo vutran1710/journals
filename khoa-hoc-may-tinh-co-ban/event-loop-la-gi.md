@@ -1,6 +1,6 @@
 # Event-Loop là gì?
 
-![](.gitbook/assets/event-loop.jpg)
+![](../.gitbook/assets/event-loop.jpg)
 
 ## Giới thiệu
 
@@ -30,14 +30,14 @@ Tham khảo: [MDN Official: EventLoop](https://developer.mozilla.org/en-US/docs/
 
 Cơ chế hoạt động của stack được biết đến nhiều nhất với tên gọi First-In-Last-Out \(FILO\), nghĩa là phần tử đầu tiên được thêm vào nhóm sẽ là phần tử cuối cùng được loại ra, và ngược lại \(Last-In-First-Out\).
 
-![](.gitbook/assets/stack.png)
+![](../.gitbook/assets/stack.png)
 
 **Queue** cũng là một mô hình dữ liệu dạng nhóm, nhưng có trình tự xử lý phần tử khác với stack. Trong mô hình Queue, trật tự phần tử \(order\) được đảm bảo theo nguyên tắc: phần tử đầu tiên được thêm vào cũng sẽ là phần tử đầu tiên được rút ra. Việc xử lý queue cũng gồm 2 thao tác:
 
 1. **Enqueue**: thêm phần tử mới vào nhóm
 2. **Dequeue**: loại bỏ phần tử cũ nhất ra khỏi nhóm
 
-![](.gitbook/assets/queue.jpg)
+![](../.gitbook/assets/queue.jpg)
 
 Queue và Stack có thể có 4 trạng thái: rỗng\(empty\), không-rỗng\(non-empty/underflow\), đầy\(full\) và tràn\(overflow\), dựa trên tương quan giữa kích cỡ nhóm \(collection-size\) của Queue/Stack và tổng số phần tử thực tế nhận vào. Về cơ bản, khi số lượng phần tử ít hơn hoặc bằng kích cỡ \(size\) của Queue/Stack, trạng thái lỗi overflow sẽ không xảy ra, ngoại trừ trong trường hợp của **Circular Queue**, khi tập nhóm elements là một vòng tròn khép kín.
 
