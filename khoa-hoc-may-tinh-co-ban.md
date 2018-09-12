@@ -28,5 +28,15 @@ Cơ chế hoạt động của stack được biết đến nhiều nhất với
 
 ![](.gitbook/assets/queue.jpg)
 
-Queue và Stack có thể có 4 trạng thái: rỗng\(empty\), không-rỗng\(non-empty/underflow\), đầy\(full\) và tràn\(overflow\), dựa trên tương quan giữa kích cỡ nhóm \(collection-size\) của Queue/Stack và tổng số phần tử thực tế nhận vào. Về cơ bản, khi số lượng phần tử ít hơn hoặc bằng kích cỡ \(size\) của Queue/Stack, trạng thái lỗi overflow sẽ không xảy ra, ngoại trừ trong trường hợp của **Circular Queue**, khi tập nhóm elements là một vòng tròn khép kín.
+Queue và Stack có thể có 4 trạng thái: rỗng\(_empty_\), không-rỗng\(_non-empty/underflow_\), đầy\(_full_\) và tràn\(_overflow_\) - dựa trên tương quan giữa kích cỡ \(_capacity_\) của Queue/Stack và tổng số phần tử thực tế nhận vào. Về cơ bản, khi số lượng phần tử ít hơn hoặc bằng kích cỡ của Queue/Stack, trạng thái lỗi overflow sẽ không xảy ra, ngoại trừ trong trường hợp của **Circular Queue**, khi Queue là vòng tròn khép kín.
+
+#### Circular Queue \(hay Ring-Buffer\), và tại sao cần Circular Queue
+
+Cho 1 Queue X rỗng có capacity = n. Có thể thấy:
+
+1. Khi thêm phần tử A \(enqueue\),  index của phần tử A là 0
+2. Khi thêm phần tử tiếp theo B, index của A tăng 1 đơn vị, và index của B lúc này là 0
+3. Thực hiện liên tiếp việc enqueue, đến khi X đã đầy, ta có:
+
+![](.gitbook/assets/main-qimg-36f821ba65bbe40a29823c7967eaace9.png)
 
