@@ -44,7 +44,9 @@ Lúc này, ta ko thể enqueue thêm nữa. Tuy nhiên giả sử ta dequeue l�
 
 Mặc dù queue đã trống, nhưng vẫn không thể thêm được phần tử nữa và lỗi overflow sẽ xảy ra nếu thực hiện enqueue. Đây là điểm hạn chế của queue thông thường. 
 
-Để giải quyết tình huống này, giải pháp tự nhiên là thêm phần tử vào đầu Queue. Câu trúc này được biết đến với tên gọi là **Circular Queue.**
+Để giải quyết tình huống này, giải pháp tự nhiên là thêm phần tử vào đầu Queue. Cấu trúc này được biết đến với tên gọi là **Circular Queue.**
 
-**Circular Queue \(hay Ring-Buffer\)**
+![ Circular Queue \(hay Ring-Buffer\)](.gitbook/assets/circular-queue.jpg)
+
+
 
