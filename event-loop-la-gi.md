@@ -16,13 +16,13 @@ Do hạn chế về kiến thức và thời gian của người viết, mọi �
 
 Tham khảo: [MDN Official: EventLoop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 
-Mô hình lý thuyết của Event-loop được áp dụng trong các JavaScript Engine hiện nay gồm 3 thành phần chính: **Stack**, **Queue** và **Heap**
+Mô hình lý thuyết của Event-loop được áp dụng trong các JavaScript Engine hiện nay gồm 3 thành phần chính: [**Stack**, **Queue**](https://journal.vutr.io/go/khoa-hoc-may-tinh-co-ban#stack-va-queue) và **Heap**
 
 ![](.gitbook/assets/default.svg)
 
 #### Heap
 
-Heap là phần không gian bộ nhớ trong Ram chứa các thông tin dữ liệu \(data, object...\) đang sử dụng trong quá trình hoạt động của trang web. Trong Heap, dữ liệu là không có thứ tự _\(unordered data structure\)._
+Heap là phần không gian bộ nhớ trong Ram chứa các thông tin dữ liệu \(data, object...\) đang được sử dụng trong quá trình hoạt động của trang web. Trong Heap, dữ liệu là không có thứ tự _\(unordered data structure\)._
 
 #### Stack và Stack Frame
 
@@ -30,7 +30,7 @@ Mỗi một hàm Javascript khi được gọi \(function call\) sẽ tạo ra m
 
 ![](.gitbook/assets/1_rrolpv-zrmpa-srnhwlbva.gif)
 
-Maximum call stack \(stack size\) của Stack trong Chrome browser là 16,000 frames. Khi số lượng frame vượt quá giới hạn của stack \(lỗi overflow\), browser sẽ văng ra lỗi **Maximum Call Stack Exceed.** Một hàm đệ quy \(recursion\) không được xử lý điều kiện tốt thường sẽ gây ra lỗi này.
+Khi số lượng frame vượt quá giới hạn của stack \(lỗi overflow\), browser sẽ văng ra lỗi **Maximum Call Stack Exceed \(Chrome\).** Một hàm đệ quy \(recursion\) không được xử lý điều kiện tốt thường sẽ gây ra lỗi này.
 
 #### Queue và Event
 
