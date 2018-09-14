@@ -40,13 +40,5 @@ Khi javascript engine chạy, nó sẽ liên tục kiểm tra trong Queue có ev
 
 Trong trường hợp Stack vẫn còn frame, event tiếp theo trong event queue sẽ phải đợi. Do đó, việc thực hiện các tác vụ nặng và đòi hỏi thời gian tính toán quá lâu sẽ dẫn đến tình trạng _blocking_ \(trình duyện treo/không thể tương tác\), gây ra trải nghiệm không tốt cho người dùng nên không được khuyến khích.
 
-Quá trình loop để kiểm tra tình trạng của Event Queue và Call Stack này được gọi là Event-loop, có thể biểu diễn bằng đoạn code như sau:
-
-```javascript
-while (queue.hasMessages()) {
-  queue.processOldestMessage();
-}
-```
-
-
+\(..tbc\)
 
